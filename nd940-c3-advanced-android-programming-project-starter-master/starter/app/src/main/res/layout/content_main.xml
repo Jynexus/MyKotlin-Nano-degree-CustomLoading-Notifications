@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.udacity.LoadingButton
+        android:id="@+id/custom_button"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textBtn="Download"
+        android:background="@color/cardview_dark_background"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="287dp"
+        android:layout_height="191dp"
+        app:layout_constraintBottom_toTopOf="@+id/custom_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RadioButton
+            android:id="@+id/firstRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://github.com/bumptech/glide" />
+
+        <RadioButton
+            android:id="@+id/secRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://github.com/udacity/nd940-c3-advanced-android-programming-project-starter/archive/master.zip" />
+
+        <RadioButton
+            android:id="@+id/thirdRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://github.com/square/retrofit" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
